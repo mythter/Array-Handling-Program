@@ -37,7 +37,7 @@ namespace ArrayHandling
         event EventHandler WriteF2Attempted;
         event EventHandler ReadF1Attempted;
 
-        // Helpers.
+        // Other events.
         event EventHandler RadioCheckChanged;
 
         // Program data.

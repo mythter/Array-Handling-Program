@@ -109,7 +109,7 @@ namespace ArrayHandling
             HideCaret();
         }
 
-        private void Radio_CheckChanged(object sender, EventArgs e)
+        private void Radio_Click(object sender, EventArgs e)
         {
             RadioCheckChanged?.Invoke(this, EventArgs.Empty);
         }

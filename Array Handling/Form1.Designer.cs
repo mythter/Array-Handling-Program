@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.NLabel = new System.Windows.Forms.Label();
             this.NUpDown = new System.Windows.Forms.NumericUpDown();
             this.ALabel = new System.Windows.Forms.Label();
@@ -107,6 +108,11 @@
             // 
             this.AUpDown.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AUpDown.Location = new System.Drawing.Point(295, 16);
+            this.AUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.AUpDown.Name = "AUpDown";
             this.AUpDown.Size = new System.Drawing.Size(120, 26);
             this.AUpDown.TabIndex = 1;
@@ -186,6 +192,7 @@
             // 
             // ReadF1Btn
             // 
+            this.ReadF1Btn.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ReadF1Btn.Location = new System.Drawing.Point(9, 21);
             this.ReadF1Btn.Name = "ReadF1Btn";
             this.ReadF1Btn.Size = new System.Drawing.Size(106, 50);
@@ -196,6 +203,7 @@
             // 
             // WriteF1Btn
             // 
+            this.WriteF1Btn.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.WriteF1Btn.Location = new System.Drawing.Point(9, 96);
             this.WriteF1Btn.Name = "WriteF1Btn";
             this.WriteF1Btn.Size = new System.Drawing.Size(106, 50);
@@ -206,12 +214,14 @@
             // 
             // WriteF2Btn
             // 
+            this.WriteF2Btn.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.WriteF2Btn.Location = new System.Drawing.Point(9, 171);
             this.WriteF2Btn.Name = "WriteF2Btn";
             this.WriteF2Btn.Size = new System.Drawing.Size(106, 50);
             this.WriteF2Btn.TabIndex = 0;
             this.WriteF2Btn.Text = "Write to F2";
             this.WriteF2Btn.UseVisualStyleBackColor = true;
+            this.WriteF2Btn.Click += new System.EventHandler(this.WriteF2Btn_Click);
             // 
             // GenBtn
             // 
@@ -249,7 +259,7 @@
             this.RadioOp4.TabStop = true;
             this.RadioOp4.Text = "Operation 4";
             this.RadioOp4.UseVisualStyleBackColor = true;
-            this.RadioOp4.Click += new System.EventHandler(this.Radio_CheckChanged);
+            this.RadioOp4.Click += new System.EventHandler(this.Radio_Click);
             // 
             // RadioOp3
             // 
@@ -261,7 +271,7 @@
             this.RadioOp3.TabStop = true;
             this.RadioOp3.Text = "Operation 3";
             this.RadioOp3.UseVisualStyleBackColor = true;
-            this.RadioOp3.Click += new System.EventHandler(this.Radio_CheckChanged);
+            this.RadioOp3.Click += new System.EventHandler(this.Radio_Click);
             // 
             // RadioOp2
             // 
@@ -273,7 +283,7 @@
             this.RadioOp2.TabStop = true;
             this.RadioOp2.Text = "Operation 2";
             this.RadioOp2.UseVisualStyleBackColor = true;
-            this.RadioOp2.Click += new System.EventHandler(this.Radio_CheckChanged);
+            this.RadioOp2.Click += new System.EventHandler(this.Radio_Click);
             // 
             // RadioOp1
             // 
@@ -286,14 +296,14 @@
             this.RadioOp1.TabStop = true;
             this.RadioOp1.Text = "Operation 1";
             this.RadioOp1.UseVisualStyleBackColor = true;
-            this.RadioOp1.Click += new System.EventHandler(this.Radio_CheckChanged);
+            this.RadioOp1.Click += new System.EventHandler(this.Radio_Click);
             // 
             // ResultTextBox
             // 
             this.ResultTextBox.Location = new System.Drawing.Point(13, 484);
             this.ResultTextBox.Name = "ResultTextBox";
             this.ResultTextBox.ReadOnly = true;
-            this.ResultTextBox.Size = new System.Drawing.Size(564, 108);
+            this.ResultTextBox.Size = new System.Drawing.Size(564, 183);
             this.ResultTextBox.TabIndex = 11;
             this.ResultTextBox.Text = "";
             // 
@@ -346,7 +356,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 604);
+            this.ClientSize = new System.Drawing.Size(592, 678);
             this.Controls.Add(this.DataGridView);
             this.Controls.Add(this.ResultLabel);
             this.Controls.Add(this.ResultTextBox);
@@ -359,8 +369,9 @@
             this.Controls.Add(this.ALabel);
             this.Controls.Add(this.NUpDown);
             this.Controls.Add(this.NLabel);
-            this.MaximumSize = new System.Drawing.Size(610, 1000);
-            this.MinimumSize = new System.Drawing.Size(610, 510);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(610, 725);
+            this.MinimumSize = new System.Drawing.Size(610, 725);
             this.Name = "Form1";
             this.Text = "Array Handling Program";
             ((System.ComponentModel.ISupportInitialize)(this.NUpDown)).EndInit();
