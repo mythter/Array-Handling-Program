@@ -100,6 +100,7 @@ namespace ArrayHandling
 
         private void Output(int[] arr)
         {
+            this.form.N = arr.Length;
             this.form.InitialArr = "";
             this.form.Result = "";
             this.form.DataGrid.Rows.Clear();
