@@ -70,8 +70,8 @@ namespace ArrayHandling
         private void ReadF1(object? sender, EventArgs e)
         {
             this.form.Open.InitialDirectory = @"С:\";
-            this.form.Save.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-            this.form.Save.Title = "Open file";
+            this.form.Open.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            this.form.Open.Title = "Open file";
 
             if (this.form.Open.ShowDialog() == DialogResult.OK)
             {
